@@ -4,16 +4,16 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = 'b68927b256d87943a6b1293db3e11aa7a51f3d05acf434965955af937dc527b854be78cabfe1a53515acef08914e03caf9301d5bddc674d28595dfcd19a733f6'
+  config.secret_key = 'b68927b256d87943a6b1293db3e11aa7a51f3d05acf434965955af937dc527b854be78cabfe1a53515acef08914e03caf9301d5bddc674d28595dfcd19a733f6'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'admin@example.com'
 
   # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
+  config.mailer = 'Devise::Mailer'
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
@@ -29,14 +29,14 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-  # config.authentication_keys = [ :email ]
+  config.authentication_keys = [ :email ]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
   # find_for_authentication method and considered in your model lookup. For instance,
   # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.
   # The same considerations mentioned for authentication_keys also apply to request_keys.
-  # config.request_keys = []
+  config.request_keys = []
 
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
@@ -126,7 +126,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
-  # config.remember_for = 2.weeks
+  config.remember_for = 2.weeks
 
   # Invalidates all the remember me tokens when the user signs out.
   config.expire_all_remember_me_on_sign_out = true
